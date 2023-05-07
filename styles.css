@@ -5,6 +5,10 @@ body {
   background: url(./game-bg.jpg) no-repeat;
   background-position: center;
   background-size: cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .container {
   width: 70%;
@@ -40,7 +44,6 @@ body {
   justify-content: center;
   font-weight: bold;
   font-size: 30px;
-  
 }
 
 .player {
