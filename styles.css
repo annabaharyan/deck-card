@@ -1,0 +1,85 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background: url(./game-bg.jpg) no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.container {
+  width: 70%;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container > p {
+  color: white;
+}
+.text {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: white;
+}
+.players {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 50px;
+}
+.player,
+.random-card {
+  width: 100px;
+  height: 200px;
+  border: 1px solid #536f85;
+  border-radius: 5px;
+  box-shadow: -3px 4px 5px grey;
+  color: #03131f;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 30px;
+  
+}
+
+.player {
+  background-image: url(./bg-image.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+.card {
+  width: 100%;
+  height: 100%;
+  font-size: 5rem;
+  background-color: white;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.card::before,
+.card::after {
+  content: attr(data-face);
+  position: absolute;
+  font-size: 1rem;
+}
+.card::before {
+  top: 5px;
+  left: 10px;
+}
+
+.card::after {
+  bottom: 5px;
+  right: 10px;
+  transform: rotate(180deg);
+}
+.card.red {
+  color: red;
+}
+.btn {
+  padding: 15px;
+  cursor: pointer;
+}
